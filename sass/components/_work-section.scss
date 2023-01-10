@@ -6,36 +6,3 @@
 .work-section__container {
   @extend %container;
 }
-
-.work-section__title {
-  @extend %title;
-}
-
-.work {
-  @extend %list;
-  display: flex;
-}
-
-.work__item {
-  margin-right: 30px;
-  position: relative;
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.work__label {
-  background-color: var(--work-label-background);
-  color: var(--main-light-color);
-  padding-top: 27px;
-  padding-bottom: 27px;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  position: absolute;
-  width: 370px;
-  bottom: 0;
-}
