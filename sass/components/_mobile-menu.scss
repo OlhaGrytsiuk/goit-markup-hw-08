@@ -1,0 +1,121 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  background-color: $main-light-color;
+  transform: translateX(-100%);
+  z-index: 999;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 480px) {
+    min-width: 480px;
+  }
+  @media screen and (max-width: 767px) {
+    overflow-y: scroll;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.is-open {
+  transform: translateY(0);
+}
+
+.menu-toggle {
+  padding: 48px 40px;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu__close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: $main-light-color;
+  border: none;
+  cursor: pointer;
+  fill: $second-font-color;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.mobile-menu__list {
+  @extend %list;
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__item:last-child {
+  margin-bottom: 302px;
+}
+
+.mobile-menu__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  color: $second-font-color;
+  &--current {
+    color: $accent-color;
+  }
+}
+
+.mobile-contacts {
+  @extend %list;
+}
+
+.mobile-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts__item:last-child {
+  margin-bottom: 64px;
+}
+
+.mobile-contacts__tel {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.176;
+  color: $accent-color;
+}
+
+.mobile-contacts__email {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.167;
+  color: $main-font-color;
+}
+
+.mobile-soc {
+  @extend %list;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-soc__item {
+  padding: 0 10px;
+  &:not(:last-child) {
+    border-right: 1px solid #21212120;
+  }
+}
+
+.mobile-soc__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.222;
+  color: $accent-color;
+}

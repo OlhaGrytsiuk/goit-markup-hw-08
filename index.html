@@ -18,22 +18,29 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
 
-    
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="page">
     <header class="page-header">
       <div class="main-header">
         <nav class="nav-header">
-          <a href="" class="logo">Web<span class="logo__header">Studio</span></a>
+          <a href="" class="logo"
+            >Web<span class="logo__header">Studio</span></a
+          >
           <ul class="menu-nav">
             <li class="menu-nav__item">
-              <a href="./index.html" class="menu-nav__link--currrent menu-nav__link">Студія</a>
+              <a
+                href="./index.html"
+                class="menu-nav__link--currrent menu-nav__link"
+                >Студія</a
+              >
             </li>
             <li class="menu-nav__item">
               <a href="./portfolio.html" class="menu-nav__link">Портфоліо</a>
             </li>
-            <li class="menu-nav__item"><a href="" class="menu-nav__link">Контакти</a></li>
+            <li class="menu-nav__item">
+              <a href="" class="menu-nav__link">Контакти</a>
+            </li>
           </ul>
         </nav>
         <ul class="contacts">
@@ -54,6 +61,15 @@
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="burger-button js-open-menu"
+          aria-controls="menu-container"
+        >
+          <svg width="40" height="40" class="burger-button__icon">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -129,6 +145,7 @@
           <ul class="work">
             <li class="work__item">
               <img
+                srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x"
                 src="./images/img1.jpg"
                 alt="Набирання тексту на клавіатурі"
                 width="370"
@@ -138,6 +155,7 @@
             </li>
             <li class="work__item">
               <img
+                srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x"
                 src="./images/img2.jpg"
                 alt="В лівій руці телефон, права рука працює на ноутбуці"
                 width="370"
@@ -147,6 +165,7 @@
             </li>
             <li class="work__item">
               <img
+                srcset="./images/img3.jpg 1x, ./images/img3@2x.jpg 2x"
                 src="./images/img3.jpg"
                 alt="Планшет в руці"
                 width="370"
@@ -164,6 +183,8 @@
           <ul class="team">
             <li class="team__item">
               <img
+                class="team__image"
+                srcset="./images/img4.jpg 1x, ./images/img4@2x.jpg 2x"
                 src="./images/img4.jpg"
                 alt="Ігор Дем'яненко"
                 width="270"
@@ -206,6 +227,8 @@
             </li>
             <li class="team__item">
               <img
+                class="team__image"
+                srcset="./images/img5.jpg 1x, ./images/img5@2x.jpg 2x"
                 src="./images/img5.jpg"
                 alt="Ольга Рєпіна"
                 width="270"
@@ -248,6 +271,8 @@
             </li>
             <li class="team__item">
               <img
+                class="team__image"
+                srcset="./images/img6.jpg 1x, ./images/img6@2x.jpg 2x"
                 src="./images/img6.jpg"
                 alt="Микола Тарасов"
                 width="270"
@@ -290,6 +315,8 @@
             </li>
             <li class="team__item">
               <img
+                class="team__image"
+                srcset="./images/img7.jpg 1x, ./images/img7@2x.jpg 2x"
                 src="./images/img7.jpg"
                 alt="Михайло Єрмаков"
                 width="270"
@@ -387,8 +414,10 @@
 
     <footer class="footer-page">
       <div class="footer-container">
-        <div>
-          <a href="" class="logo">Web<span class="logo__footer">Studio</span></a>
+        <div class="footer-margin footer-margin__tablet">
+          <a href="" class="logo"
+            >Web<span class="logo__footer">Studio</span></a
+          >
           <address class="footer-address">
             <ul class="footer-contacs">
               <li class="footer-contacs__item">
@@ -406,7 +435,9 @@
                 >
               </li>
               <li class="footer-contacs__item">
-                <a href="tel:+380961111111" class="footer-contacs__link">+38 096 111 11 11</a>
+                <a href="tel:+380961111111" class="footer-contacs__link"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
@@ -444,7 +475,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer-margin">
+        <div class="footer-form">
           <p class="footer-text">Підпишіться на розсилку</p>
           <form class="email-footer">
             <input
@@ -464,6 +495,59 @@
       </div>
     </footer>
 
+    <div class="menu-container is-open js-menu-container" id="menu-container">
+      <div class="menu-toggle">
+        <div class="mobile-menu">
+          <button type="button" class="mobile-menu__close js-close-menu">
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#icon-close_40px"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a
+                href="./index.html"
+                class="mobile-menu__link mobile-menu__link--current"
+                >Студія</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link">Контакти</a>
+            </li>
+          </ul>
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__tel"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mobile-contacts__email"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-soc">
+            <li class="mobile-soc__item">
+              <a href="" class="mobile-soc__link">Instagram</a>
+            </li>
+            <li class="mobile-soc__item">
+              <a href="" class="mobile-soc__link">Twitter</a>
+            </li>
+            <li class="mobile-soc__item">
+              <a href="" class="mobile-soc__link">Facebook</a>
+            </li>
+            <li class="mobile-soc__item">
+              <a href="" class="mobile-soc__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <div class="modal-container">
@@ -472,7 +556,9 @@
               <use href="./images/icons.svg#icon-Vector"></use>
             </svg>
           </button>
-          <p class="modal-container__title">Залиште свої дані, ми вам передзвонимо</p>
+          <p class="modal-container__title">
+            Залиште свої дані, ми вам передзвонимо
+          </p>
           <form name="contact-form" autocomplete="on">
             <label class="contact-form__label" for="user-name">Ім'я</label>
             <div class="contact-form__field">
@@ -515,7 +601,9 @@
               </svg>
             </div>
 
-            <label class="contact-form__label" for="user-comment">Коментар</label>
+            <label class="contact-form__label" for="user-comment"
+              >Коментар</label
+            >
             <textarea
               class="contact-form__textarea"
               name="user-comment"
@@ -540,11 +628,14 @@
                 <a class="checkbox__link" href="#">Умови договору</a></label
               >
             </div>
-            <button type="submit" class="modal-container__button">Відправити</button>
+            <button type="submit" class="modal-container__button">
+              Відправити
+            </button>
           </form>
         </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

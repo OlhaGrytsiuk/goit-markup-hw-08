@@ -18,20 +18,29 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
 
-    
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="page">
     <header class="page-header">
       <div class="main-header">
         <nav class="nav-header">
-          <a href="" class="logo">Web<span class="logo__header">Studio</span></a>
+          <a href="" class="logo"
+            >Web<span class="logo__header">Studio</span></a
+          >
           <ul class="menu-nav">
-            <li class="menu-nav__item"><a href="./index.html" class="menu-nav__link">Студія</a></li>
             <li class="menu-nav__item">
-              <a href="./portfolio.html" class="menu-nav__link menu-nav__link--currrent">Портфоліо</a>
+              <a href="./index.html" class="menu-nav__link">Студія</a>
             </li>
-            <li class="menu-nav__item"><a href="" class="menu-nav__link">Контакти</a></li>
+            <li class="menu-nav__item">
+              <a
+                href="./portfolio.html"
+                class="menu-nav__link--currrent menu-nav__link"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="menu-nav__item">
+              <a href="" class="menu-nav__link">Контакти</a>
+            </li>
           </ul>
         </nav>
         <ul class="contacts">
@@ -52,6 +61,15 @@
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="burger-button js-open-menu"
+          aria-controls="menu-container"
+        >
+          <svg width="40" height="40" class="burger-button__icon">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -83,6 +101,8 @@
               <a href="#" class="project__link">
                 <div class="project__hidden">
                   <img
+                    class="project__image"
+                    srcset="./images/img8.jpg 1x, ./images/img8@2x.jpg 2x"
                     src="./images/img8.jpg"
                     alt="ноутбук"
                     width="370"
@@ -107,6 +127,8 @@
               <a href="#" class="project__link">
                 <div class="project__hidden">
                   <img
+                    class="project__image"
+                    srcset="./images/img9.jpg 1x, ./images/img9@2x.jpg 2x"
                     src="./images/img9.jpg"
                     alt="гра в баскетбол"
                     width="370"
@@ -133,6 +155,8 @@
               <a href="#" class="project__link">
                 <div class="project__hidden">
                   <img
+                    class="project__image"
+                    srcset="./images/img10.jpg 1x, ./images/img10@2x.jpg 2x"
                     src="./images/img10.jpg"
                     alt="логотип ресторану риба"
                     width="370"
@@ -157,6 +181,8 @@
               <a href="#" class="project__link">
                 <div class="project__hidden">
                   <img
+                    class="project__image"
+                    srcset="./images/img11.jpg 1x, ./images/img11@2x.jpg 2x"
                     src="./images/img11.jpg"
                     alt="навушники"
                     width="370"
@@ -181,6 +207,8 @@
               <a href="#" class="project__link">
                 <div class="project__hidden">
                   <img
+                    class="project__image"
+                    srcset="./images/img12.jpg 1x, ./images/img12@2x.jpg 2x"
                     src="./images/img12.jpg"
                     alt="дві коробки"
                     width="370"
@@ -205,6 +233,8 @@
               <a href="#" class="project__link">
                 <div class="project__hidden">
                   <img
+                    class="project__image"
+                    srcset="./images/img13.jpg 1x, ./images/img13@2x.jpg 2x"
                     src="./images/img13.jpg"
                     alt="монітор"
                     width="370"
@@ -229,6 +259,8 @@
               <a href="#" class="project__link">
                 <div class="project__hidden">
                   <img
+                    class="project__image"
+                    srcset="./images/img14.jpg 1x, ./images/img14@2x.jpg 2x"
                     src="./images/img14.jpg"
                     alt="журнал"
                     width="370"
@@ -253,6 +285,8 @@
               <a href="#" class="project__link">
                 <div class="project__hidden">
                   <img
+                    class="project__image"
+                    srcset="./images/img15.jpg 1x, ./images/img15@2x.jpg 2x"
                     src="./images/img15.jpg"
                     alt="бірка"
                     width="370"
@@ -277,6 +311,8 @@
               <a href="#" class="project__link">
                 <div class="project__hidden">
                   <img
+                    class="project__image"
+                    srcset="./images/img16.jpg 1x, ./images/img16@2x.jpg 2x"
                     src="./images/img16.jpg"
                     alt="руки на клавіатурі ноутбука"
                     width="370"
@@ -304,8 +340,10 @@
 
     <footer class="footer-page">
       <div class="footer-container">
-        <div>
-          <a href="" class="logo">Web<span class="logo__footer">Studio</span></a>
+        <div class="footer-margin footer-margin__tablet">
+          <a href="" class="logo"
+            >Web<span class="logo__footer">Studio</span></a
+          >
           <address class="footer-address">
             <ul class="footer-contacs">
               <li class="footer-contacs__item">
@@ -323,7 +361,9 @@
                 >
               </li>
               <li class="footer-contacs__item">
-                <a href="tel:+380961111111" class="footer-contacs__link">+38 096 111 11 11</a>
+                <a href="tel:+380961111111" class="footer-contacs__link"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
@@ -361,7 +401,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer-margin">
+        <div class="">
           <p class="footer-text">Підпишіться на розсилку</p>
           <form class="email-footer">
             <input
@@ -380,5 +420,58 @@
         </div>
       </div>
     </footer>
+    <div class="menu-container is-open js-menu-container" id="menu-container">
+      <div class="menu-toggle">
+        <div class="mobile-menu">
+          <button type="button" class="mobile-menu__close js-close-menu">
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#icon-close_40px"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="mobile-menu__link">Студія</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                href="./portfolio.html"
+                class="mobile-menu__link--current mobile-menu__link"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link">Контакти</a>
+            </li>
+          </ul>
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__tel"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mobile-contacts__email"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-soc">
+            <li class="mobile-soc__item">
+              <a href="" class="mobile-soc__link">Instagram</a>
+            </li>
+            <li class="mobile-soc__item">
+              <a href="" class="mobile-soc__link">Twitter</a>
+            </li>
+            <li class="mobile-soc__item">
+              <a href="" class="mobile-soc__link">Facebook</a>
+            </li>
+            <li class="mobile-soc__item">
+              <a href="" class="mobile-soc__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

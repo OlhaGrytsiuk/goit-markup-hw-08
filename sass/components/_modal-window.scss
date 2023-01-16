@@ -5,6 +5,8 @@
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -19,12 +21,11 @@
   @include centeredFlex();
   padding: 20px 0;
   height: 100%;
-  
 }
 
 .modal-container {
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: var(--main-light-color);
   position: absolute;
   top: 50%;
@@ -34,6 +35,10 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-container__close {
@@ -124,15 +129,27 @@
 }
 
 .checkbox {
-  @include centeredFlex();
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
-  width: 423px;
+  width: 370px;
+  @media screen and (min-width: 1200px) {
+    width: 423px;
+  }
 }
 
 .checkbox__label {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1, 1667;
+  @media screen and (min-width: 1200px) {
+    gap: 7px;
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .checkbox__input {
