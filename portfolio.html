@@ -62,14 +62,15 @@
           </li>
         </ul>
         <button
-          type="button"
-          class="burger-button js-open-menu"
-          aria-controls="menu-container"
-        >
-          <svg width="40" height="40" class="burger-button__icon">
-            <use href="./images/icons.svg#icon-menu_40px"></use>
-          </svg>
-        </button>
+        type="button"
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="40" height="40" class="burger-button__icon">
+          <use href="./images/icons.svg#icon-menu_40px"></use>
+        </svg>
+      </button>
       </div>
     </header>
     <main>
@@ -628,58 +629,55 @@
         </div>
       </div>
     </footer>
-    <div class="menu-container is-open js-menu-container" id="menu-container">
-      <div class="menu-toggle">
-        <div class="mobile-menu">
-          <button type="button" class="mobile-menu__close js-close-menu">
-            <svg width="40" height="40">
-              <use href="./images/icons.svg#icon-close_40px"></use>
-            </svg>
-          </button>
-          <ul class="mobile-menu__list">
-            <li class="mobile-menu__item">
-              <a href="./index.html" class="mobile-menu__link">Студія</a>
-            </li>
-            <li class="mobile-menu__item">
-              <a
-                href="./portfolio.html"
-                class="mobile-menu__link--current mobile-menu__link"
-                >Портфоліо</a
-              >
-            </li>
-            <li class="mobile-menu__item">
-              <a href="" class="mobile-menu__link">Контакти</a>
-            </li>
-          </ul>
-          <ul class="mobile-contacts">
-            <li class="mobile-contacts__item">
-              <a href="tel:+380961111111" class="mobile-contacts__tel"
-                >+38 096 111 11 11</a
-              >
-            </li>
-            <li class="mobile-contacts__item">
-              <a href="mailto:info@devstudio.com" class="mobile-contacts__email"
-                >info@devstudio.com</a
-              >
-            </li>
-          </ul>
-          <ul class="mobile-soc">
-            <li class="mobile-soc__item">
-              <a href="" class="mobile-soc__link">Instagram</a>
-            </li>
-            <li class="mobile-soc__item">
-              <a href="" class="mobile-soc__link">Twitter</a>
-            </li>
-            <li class="mobile-soc__item">
-              <a href="" class="mobile-soc__link">Facebook</a>
-            </li>
-            <li class="mobile-soc__item">
-              <a href="" class="mobile-soc__link">LinkedIn</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-toggle js-close-menu">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a
+            href="./index.html"
+            class="mobile-menu__link"
+            >Студія</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a href="./portfolio.html" class="mobile-menu__link mobile-menu__link--current">Портфоліо</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="" class="mobile-menu__link">Контакти</a>
+        </li>
+      </ul>
+      <ul class="mobile-contacts">
+        <li class="mobile-contacts__item">
+          <a href="tel:+380961111111" class="mobile-contacts__tel"
+            >+38 096 111 11 11</a
+          >
+        </li>
+        <li class="mobile-contacts__item">
+          <a href="mailto:info@devstudio.com" class="mobile-contacts__email"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-soc">
+        <li class="mobile-soc__item">
+          <a href="" class="mobile-soc__link">Instagram</a>
+        </li>
+        <li class="mobile-soc__item">
+          <a href="" class="mobile-soc__link">Twitter</a>
+        </li>
+        <li class="mobile-soc__item">
+          <a href="" class="mobile-soc__link">Facebook</a>
+        </li>
+        <li class="mobile-soc__item">
+          <a href="" class="mobile-soc__link">LinkedIn</a>
+        </li>
+      </ul>
+ 
+</div>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -63,8 +63,9 @@
         </ul>
         <button
           type="button"
-          class="burger-button js-open-menu"
-          aria-controls="menu-container"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
         >
           <svg width="40" height="40" class="burger-button__icon">
             <use href="./images/icons.svg#icon-menu_40px"></use>
@@ -514,10 +515,8 @@
       </div>
     </footer>
 
-    <div class="menu-container is-open js-menu-container" id="menu-container">
-      <div class="menu-toggle">
-        <div class="mobile-menu">
-          <button type="button" class="mobile-menu__close js-close-menu">
+    <div class="menu-container js-menu-container" id="mobile-menu">
+          <button type="button" class="menu-toggle js-close-menu">
             <svg width="40" height="40">
               <use href="./images/icons.svg#icon-close_40px"></use>
             </svg>
@@ -563,8 +562,7 @@
               <a href="" class="mobile-soc__link">LinkedIn</a>
             </li>
           </ul>
-        </div>
-      </div>
+     
     </div>
 
     <div class="backdrop is-hidden" data-modal>
