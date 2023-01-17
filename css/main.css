@@ -1318,10 +1318,6 @@ textarea {
   background-color: var(--second-accent-color);
 }
 
-.project-section__container {
-  min-width: 480px;
-}
-
 .project-section__title {
   white-space: nowrap;
   width: 1px;
