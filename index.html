@@ -145,8 +145,8 @@
           <ul class="work">
             <li class="work__item">
               <img
-                srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x"
-                src="./images/img1.jpg"
+                srcset="./images/img1-1200.jpg 1x, ./images/img1-1200@2x.jpg 2x"
+                src="./images/img1-1200.jpg"
                 alt="Набирання тексту на клавіатурі"
                 width="370"
                 height="294"
@@ -155,8 +155,8 @@
             </li>
             <li class="work__item">
               <img
-                srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x"
-                src="./images/img2.jpg"
+                srcset="./images/img2-1200.jpg 1x, ./images/img2-1200@2x.jpg 2x"
+                src="./images/img2-1200.jpg"
                 alt="В лівій руці телефон, права рука працює на ноутбуці"
                 width="370"
                 height="294"
@@ -165,8 +165,8 @@
             </li>
             <li class="work__item">
               <img
-                srcset="./images/img3.jpg 1x, ./images/img3@2x.jpg 2x"
-                src="./images/img3.jpg"
+                srcset="./images/img3-1200.jpg 1x, ./images/img3-1200@2x.jpg 2x"
+                src="./images/img3-1200.jpg"
                 alt="Планшет в руці"
                 width="370"
                 height="294"
@@ -182,14 +182,19 @@
           <h2 class="team-section__title">Наша команда</h2>
           <ul class="team">
             <li class="team__item">
-              <img
+              <picture>
+                <source srcset="./images/img4-1200.jpg 1x, ./images/img4-1200@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/img4-768.jpg 1x, ./images/img4-768@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/img4-480.jpg 1x, ./images/img4-480@2x.jpg 2x" media="(min-width: 480px)" />
+                <img
                 class="team__image"
-                srcset="./images/img4.jpg 1x, ./images/img4@2x.jpg 2x"
-                src="./images/img4.jpg"
+                src="./images/img4-480.jpg"
                 alt="Ігор Дем'яненко"
                 width="270"
                 height="260"
               />
+              </picture>
+              
               <div class="team-card">
                 <h3 class="team-card__subtitle">Ігор Дем'яненко</h3>
                 <p>Product Designer</p>
@@ -226,14 +231,18 @@
               </div>
             </li>
             <li class="team__item">
-              <img
+              <picture>
+                <source srcset="./images/img5-1200.jpg 1x, ./images/img5-1200@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/img5-768.jpg 1x, ./images/img5-768@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/img5-480.jpg 1x, ./images/img5-480@2x.jpg 2x" media="(min-width: 480px)" />
+                <img
                 class="team__image"
-                srcset="./images/img5.jpg 1x, ./images/img5@2x.jpg 2x"
-                src="./images/img5.jpg"
+                src="./images/img5-480.jpg"
                 alt="Ольга Рєпіна"
                 width="270"
                 height="260"
               />
+              </picture>
               <div class="team-card">
                 <h3 class="team-card__subtitle">Ольга Рєпіна</h3>
                 <p>Frontend Developer</p>
@@ -270,14 +279,19 @@
               </div>
             </li>
             <li class="team__item">
-              <img
+              <picture>
+                <source srcset="./images/img6-1200.jpg 1x, ./images/img6-1200@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/img6-768.jpg 1x, ./images/img6-768@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/img6-480.jpg 1x, ./images/img6-480@2x.jpg 2x" media="(min-width: 480px)" />
+                <img
                 class="team__image"
-                srcset="./images/img6.jpg 1x, ./images/img6@2x.jpg 2x"
-                src="./images/img6.jpg"
+                src="./images/img6-480.jpg"
                 alt="Микола Тарасов"
                 width="270"
                 height="260"
               />
+              </picture>
+             
               <div class="team-card">
                 <h3 class="team-card__subtitle">Микола Тарасов</h3>
                 <p>Marketing</p>
@@ -314,14 +328,19 @@
               </div>
             </li>
             <li class="team__item">
-              <img
+              <picture>
+                <source srcset="./images/img7-1200.jpg 1x, ./images/img7-1200@2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="./images/img7-768.jpg 1x, ./images/img7-768@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/img7-480.jpg 1x, ./images/img7-480@2x.jpg 2x" media="(min-width: 480px)" />
+                <img
                 class="team__image"
-                srcset="./images/img7.jpg 1x, ./images/img7@2x.jpg 2x"
-                src="./images/img7.jpg"
+                src="./images/img7-480.jpg"
                 alt="Михайло Єрмаков"
                 width="270"
                 height="260"
               />
+              </picture>
+              
               <div class="team-card">
                 <h3 class="team-card__subtitle">Михайло Єрмаков</h3>
                 <p>UI Designer</p>
