@@ -37,11 +37,6 @@
     width: 1200px;
   }
 }
-@media screen and (min-width: 1600px) {
-  .project-section__container, .client-section__container, .team-section__container, .work-section__container, .feature-section__container, .hero__container, .footer-container, .main-header {
-    width: 1600px;
-  }
-}
 
 .project-section, .client-section, .team-section, .work-section, .feature-section {
   padding-top: 60px;
