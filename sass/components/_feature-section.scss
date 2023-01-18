@@ -1,55 +1,67 @@
 .feature-section {
-  @extend %section;
-}
-
-.feature-section__container {
-  @extend %container;
-}
-
-.feature-section__title {
-  @include visually-hidden;
-}
-
-.feature {
-  @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.feature__item {
-  width: 450px;
-  @media screen and (min-width: 768px) {
-    width: 354px;
+    @extend %section;
   }
-  @media screen and (min-width: 1200px) {
-    width: 270px;
+  
+  .feature-section__container {
+    @extend %container;
   }
-}
+  
+  .feature-section__title {
+    @include visually-hidden;
+  }
+  
+  .feature {
+    @extend %list;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 
-.feature__icon {
-  @include centeredFlex();
-  background-color: var(--team-bgr-color);
-  width: 450px;
-  height: 120px;
-  margin-bottom: 30px;
-  border-radius: 4px;
-  @media screen and (min-width: 768px) {
-    width: 354px;
+  .feature__item {
+    @media screen and (min-width: 320px) {
+        width: 100%;
+       }
+       @media screen and (min-width: 480px) {
+        width: 450px;
+       } 
+       @media screen and (min-width: 768px) {
+        width: 354px;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 270px;
+      }  
   }
-  @media screen and (min-width: 1200px) {
-    width: 270px;
-  }
-}
-.feature__subtitle {
-  margin-bottom: 10px;
-  color: var(--second-font-color);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
 
-  text-transform: uppercase;
-  @media screen and (max-width: 767px) {
-    text-align: center;
+  .feature__icon {
+    @include centeredFlex();
+    background-color: var(--team-bgr-color);
+    
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    @media screen and (min-width: 320px) {
+        width: 100%;
+       }
+       @media screen and (min-width: 480px) {
+        width: 450px;
+       } 
+       @media screen and (min-width: 768px) {
+        width: 354px;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 270px;
+      }
   }
-}
+  .feature__subtitle {
+    margin-bottom: 10px;
+    color: var(--second-font-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+  
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }

@@ -1,38 +1,38 @@
 .page-header {
-  border-bottom: 1px solid var(--border-header-color);
-  @media screen and (max-width: 479px) {
-    min-width: 480px;
-  }
+  border-bottom: 1px solid $border-header-color;
+  
 }
 
 .main-header {
-  @include space-betweenFlex();
   @extend %container;
-
-  @media screen and (max-width: 767px) {
-    position: relative;
-    padding: 16px 0px 16px 15px;
-  }
+  @include space-betweenFlex();
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .nav-header {
-  @include space-betweenFlex();
+  @media screen and (min-width: 768px) {
+    @include space-betweenFlex();
+  }
+}
+
+.menu-nav,
+.contacts {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .menu-nav {
-  @extend %list;
-
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+   @extend %list;
   @media screen and (min-width: 768px) {
     display: flex;
     margin-left: 87px;
-  }
+  } 
   @media screen and (min-width: 1200px) {
-    display: flex;
-    margin-left: 93px;
+   margin-left: 93px;
   }
+
 }
 
 .menu-nav__item:not(:last-child) {
@@ -71,7 +71,6 @@
     opacity: 0;
   }
 }
-
 .menu-nav__link--currrent {
   color: var(--accent-color);
   &::after {
@@ -81,19 +80,14 @@
 
 .contacts {
   @extend %list;
-  margin-left: auto;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 768px) {
+   @media screen and (min-width: 768px) {
     display: block;
-  }
-  @media screen and (min-width: 1200px) {
-    display: flex;
+    margin-left: auto;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
   }
 }
-
 .contacts__item + .contacts__item {
   @media screen and (min-width: 1200px) {
     margin-left: 40px;
@@ -129,18 +123,5 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.burger-button {
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
 
-  @media screen and (max-width: 767px) {
-    display: block;
-    position: absolute;
-    @include centeredFlex();
-    top: 10px;
-    right: 10px;
-    border: none;
-    background-color: $main-light-color;
-  }
-}
+

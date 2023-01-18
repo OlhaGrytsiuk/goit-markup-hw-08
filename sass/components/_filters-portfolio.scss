@@ -1,64 +1,67 @@
 .project-section {
-  @extend %section;
-}
-
-.project-section__container {
-  @extend %container;
+    @extend %section;
+  }
   
-}
-
-.project-section__title {
-  @include visually-hidden;
-}
-
-.filters {
-  @extend %list;
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 40px;
-  @media screen and (max-width: 767px) {
-    width: 326px;
+  .project-section__container {
+    @extend %container;
+    
   }
-
-  @media screen and (min-width: 768px) {
-    width: 575px;
-    margin-left: auto;
-    margin-right: auto;
+  
+  .project-section__title {
+    @include visually-hidden;
   }
-  @media screen and (min-width: 1200px) {
-    width: 569px;
-    margin-bottom: 50px;
+  
+  .filters {
+    @extend %list;
+  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+    @media screen and (max-width: 320px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 480px) {
+      width: 326px;
+    }
+  
+    @media screen and (min-width: 768px) {
+      width: 575px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 569px;
+      margin-bottom: 50px;
+    }
+  } 
+  
+  .filters__item:not(:last-child) {
+    margin-right: -7px;
   }
-}
-
-.filters__item:not(:last-child) {
-  margin-right: -7px;
-}
-
-.filters__button {
-  font-family: inherit;
-  font-style: normal;
-  background: var(--team-bgr-color);
-  color: var(--second-font-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.625;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  padding: 6px 22px;
-  text-align: center;
-  cursor: pointer;
-  transition-property: background-color, color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    background-color: var(--accent-color);
-    color: var(--main-light-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
+  
+  .filters__button {
+    font-family: inherit;
+    font-style: normal;
+    background: var(--team-bgr-color);
+    color: var(--second-font-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 6px 22px;
+    text-align: center;
+    cursor: pointer;
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+      color: var(--main-light-color);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
   }
-}

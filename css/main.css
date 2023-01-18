@@ -22,6 +22,11 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+@media screen and (min-width: 320px) {
+  .project-section__container, .client-section__container, .team-section__container, .work-section__container, .feature-section__container, .hero__container, .footer-container, .main-header {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 480px) {
   .project-section__container, .client-section__container, .team-section__container, .work-section__container, .feature-section__container, .hero__container, .footer-container, .main-header {
     width: 480px;
@@ -99,12 +104,7 @@ textarea {
 }
 
 .page-header {
-  border-bottom: 1px solid var(--border-header-color);
-}
-@media screen and (max-width: 479px) {
-  .page-header {
-    min-width: 480px;
-  }
+  border-bottom: 1px solid #ececec;
 }
 
 .main-header {
@@ -117,31 +117,31 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-@media screen and (max-width: 767px) {
-  .main-header {
-    position: relative;
-    padding: 16px 0px 16px 15px;
+
+@media screen and (min-width: 768px) {
+  .nav-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
-.nav-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media screen and (max-width: 767px) {
-  .menu-nav {
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .menu-nav,
+.contacts {
     display: none;
   }
 }
+
 @media screen and (min-width: 768px) {
   .menu-nav {
     display: -webkit-box;
@@ -152,9 +152,6 @@ textarea {
 }
 @media screen and (min-width: 1200px) {
   .menu-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     margin-left: 93px;
   }
 }
@@ -203,20 +200,13 @@ textarea {
   opacity: 1;
 }
 
-.contacts {
-  margin-left: auto;
-}
-@media screen and (max-width: 767px) {
-  .contacts {
-    display: none;
-  }
-}
 @media screen and (min-width: 768px) {
   .contacts {
     display: block;
+    margin-left: auto;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .contacts {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -267,36 +257,10 @@ textarea {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
-  .burger-button {
-    display: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  .burger-button {
-    display: block;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background-color: #ffffff;
-  }
-}
-
 .footer-page {
   background: var(--border-bgr-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  min-width: 480px;
 }
 @media screen and (max-width: 1199px) {
   .footer-page {
@@ -454,7 +418,7 @@ textarea {
 }
 
 .email-footer__input {
-  width: 450px;
+  width: 100%;
   height: 50px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -495,6 +459,11 @@ textarea {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 768px) {
+  .email-footer__input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .email-footer__input {
@@ -547,7 +516,6 @@ textarea {
 .hero__image {
   padding-top: 118px;
   padding-bottom: 118px;
-  min-width: 480px;
   background-position: center;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/imghero480.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/imghero480.jpg);
@@ -561,11 +529,22 @@ textarea {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/imghero480@2x.jpg);
   }
 }
+@media screen and (min-width: 320px) {
+  .hero__image {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero__image {
+    width: 480px;
+  }
+}
 @media screen and (min-width: 768px) {
   .hero__image {
+    width: 768px;
+    background-size: 768px 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/imghero768.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/imghero768.jpg);
-    background-size: 768px 400px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
@@ -578,6 +557,8 @@ textarea {
   .hero__image {
     padding-top: 200px;
     padding-bottom: 200px;
+    width: 100%;
+    height: 100%;
     background-size: 1600px 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Imghero1200.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Imghero1200.jpg);
@@ -594,16 +575,20 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 360px;
   color: var(--main-light-color);
   font-weight: 900;
   font-size: 26px;
   line-height: 1.615;
   text-transform: uppercase;
 }
+@media screen and (min-width: 320px) {
+  .hero__title {
+    max-width: 360px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero__title {
-    width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
@@ -655,6 +640,9 @@ textarea {
 }
 
 .feature {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -663,8 +651,15 @@ textarea {
   gap: 30px;
 }
 
-.feature__item {
-  width: 450px;
+@media screen and (min-width: 320px) {
+  .feature__item {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .feature__item {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .feature__item {
@@ -688,10 +683,19 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: var(--team-bgr-color);
-  width: 450px;
   height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
+}
+@media screen and (min-width: 320px) {
+  .feature__icon {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .feature__icon {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .feature__icon {
@@ -737,6 +741,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .work__item {
@@ -764,13 +771,15 @@ textarea {
 
 .team-section {
   background: var(--team-bgr-color);
-  min-width: 480px;
 }
 
 .team {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
@@ -782,9 +791,16 @@ textarea {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team__image {
-  width: 450px;
-  height: 460px;
+@media screen and (min-width: 320px) {
+  .team__image {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .team__image {
+    width: 450px;
+    height: 460px;
+  }
 }
 @media screen and (min-width: 768px) {
   .team__image {
@@ -859,10 +875,6 @@ textarea {
   fill: var(--main-light-color);
 }
 
-.client-section {
-  min-width: 480px;
-}
-
 .client {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -921,9 +933,9 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 32px;
   background-color: #ffffff;
   z-index: 999;
+  padding: 48px 40px;
   overflow-y: scroll;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -932,6 +944,11 @@ textarea {
   transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
 
 .menu-container.is-open {
   -webkit-transform: translateX(0);
@@ -939,15 +956,12 @@ textarea {
 }
 
 .menu-container .menu-toggle {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  color: #fff;
+  position: fixed;
+  top: 10px;
+  right: 15px;
 }
 
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -957,23 +971,22 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0;
+  min-height: 40px;
+  min-width: 40px;
   padding: 0;
-  background-color: transparent;
+  margin: 0;
+  background-color: #ffffff;
   cursor: pointer;
   border: none;
-  border-radius: 50%;
   outline: none;
 }
-
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
 }
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+.menu-toggle:hover, .menu-toggle:focus {
+  fill: #2196f3;
 }
 
 .mobile-menu {
@@ -1095,8 +1108,6 @@ textarea {
 }
 
 .modal-container {
-  width: 450px;
-  height: 609px;
   background-color: var(--main-light-color);
   position: absolute;
   top: 50%;
@@ -1109,6 +1120,19 @@ textarea {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 320px) {
+  .modal-container {
+    overflow-y: scroll;
+    width: 90%;
+    height: 90%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal-container {
+    width: 450px;
+    height: 609px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal-container {
@@ -1238,8 +1262,15 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 30px;
-  width: 370px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .checkbox {
+    width: 370px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .checkbox {
@@ -1340,7 +1371,12 @@ textarea {
   gap: 15px;
   margin-bottom: 40px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 320px) {
+  .filters {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
   .filters {
     width: 326px;
   }
@@ -1398,6 +1434,9 @@ textarea {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 -30px -30px 0;
 }
 
@@ -1428,7 +1467,12 @@ textarea {
   overflow: hidden;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) {
+  .project__image {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
   .project__image {
     width: 450px;
     height: 294px;
@@ -1450,7 +1494,8 @@ textarea {
 .project__overlay {
   position: absolute;
   top: 0;
-  height: 294px;
+  width: 100%;
+  height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   color: var(--main-light-color);
   padding: 77px 24px;
@@ -1468,7 +1513,7 @@ textarea {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .project__overlay {
     width: 450px;
   }
