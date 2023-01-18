@@ -117,7 +117,6 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 10px;
 }
 
 @media screen and (min-width: 768px) {
